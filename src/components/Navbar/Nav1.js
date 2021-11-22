@@ -4,7 +4,7 @@ import { SearchIcon, MenuIcon, XIcon, ShoppingCartIcon } from '@heroicons/react/
 import { Link } from "react-router-dom"
 import insta from '../../pics/instagram.png'
 import fb from '../../pics/facebook.png'
-import brand from '../../pics/kangaroo.png'
+import brand from '../../pics/kangarooWhite.png'
 //import Footer from './Footer.js'
 
 const navigation = [
@@ -20,7 +20,7 @@ function classNames(...classes) {
 const Nav1 = ({ cart }) => {
   return (
     <div className="">
-      <Menu as="div" className="bg-white fixed top-0 right-0 w-full sm:static">
+      <Menu as="div" className="bg-black fixed top-0 right-0 w-full sm:static">
         {({ open }) => (
         <>  
         <div className={classNames(open ? "" : "border-b", "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8")}>
@@ -29,9 +29,13 @@ const Nav1 = ({ cart }) => {
           <Menu.Button className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
             <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
                   ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="white">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
                   )}
           </Menu.Button>
           </div>
@@ -40,19 +44,10 @@ const Nav1 = ({ cart }) => {
                 <Link to="/">
                   <div className="flex-shrink-0 flex items-center">
                     <img
-                      className="block sm:hidden h-8 w-auto"
-                      src={brand}
-                      alt="candles"
-                    />
-                    <img
                       className="hidden sm:block h-12 w-auto"
                       src={brand}
                       alt="candles"
                     />
-                    <div className="text-containerr ml-2 mr-2">
-                      <p className="text-sm sm:text-base tracking-wider font-poiret-one font-bold">Kangur</p>
-                      <p className="text-sm sm:text-base tracking-wider font-poiret-one font-bold">MakesCandles</p>
-                    </div>
                   </div>
                 </Link>
                 <div className="hidden sm:block sm:ml-6">
@@ -75,7 +70,13 @@ const Nav1 = ({ cart }) => {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                
+                <Link to="/">  
+                  <img
+                    className="block sm:hidden h-10 w-auto"
+                    src={brand}
+                    alt="candles"
+                  />
+                </Link>  
               </div>
 
         </div>
@@ -91,7 +92,7 @@ const Nav1 = ({ cart }) => {
         >
         
           <Menu.Items className="absolute left-0 w-full origin-top-right bg-white divide-y divide-gray-100 text-center focus:outline-none">
-            <div className="px-1 py-12 border-b">
+            <div className="px-1 py-12 border-b bg-black">
               <div>
                 {navigation.map((item) =>(
                   <Menu.Item>
@@ -99,7 +100,7 @@ const Nav1 = ({ cart }) => {
                       <div
                         key={item.name}
                         className={classNames(
-                          item.current ? 'underline text-black' : 'text-black',
+                          item.current ? 'underline text-white' : 'text-white',
                          'block px-2 py-5 rounded-md text-base tracking-widest'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -109,24 +110,6 @@ const Nav1 = ({ cart }) => {
                     </Link>
                   </Menu.Item>
                 ))}
-              </div>
-              <div>
-                <div className="my-5 w-full h-6 flex justify-center">
-                  <a href="https://www.instagram.com/?hl=en" className="block mr-6">
-                    <img 
-                      className="block h-full" 
-                      src={insta} 
-                      alt="fb-candles" 
-                    />
-                  </a>
-                  <a href="https://www.facebook.com/" className="block">
-                  <img 
-                      className="block h-full" 
-                      src={fb} 
-                      alt="insta-candles" 
-                    />  
-                  </a> 
-                </div>  
               </div>    
             </div>
           </Menu.Items>
