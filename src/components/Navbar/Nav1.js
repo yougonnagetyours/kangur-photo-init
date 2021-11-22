@@ -19,7 +19,7 @@ function classNames(...classes) {
 
 const Nav1 = ({ cart }) => {
   return (
-    <div className="">
+    <div className="fixed z-50">
       <Menu as="div" className="bg-black fixed top-0 right-0 w-full sm:static">
         {({ open }) => (
         <>  

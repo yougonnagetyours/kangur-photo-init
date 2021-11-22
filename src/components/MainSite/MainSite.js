@@ -1,6 +1,8 @@
 import React from 'react'
+import Section from './Section/Section'
 
-import main1 from '../../pics/main1.jpg'
+import about from '../../pics/about-cover.jpeg'
+import zakopane from '../../pics/Zakopane.jpeg'
 import main2 from '../../pics/main2.jpg'
 import main3 from '../../pics/main3.jpg'
 import {
@@ -10,68 +12,20 @@ import {
   Link
 } from "react-router-dom"
 
-const MainSite = ({ products }) => {
+const sections = [
+  {name:"O mnie",img:"about",slug:"/o-mnie"},
+  {name:"Zakopane",img:"zakopane",slug:"/zakopane"},
+]
+
+const MainSite = () => {
   return (
-      <div>  
-        <div className="1strow box-border mb-10 lg:flex lg:mb-20">
-          <div className="sm:flex sm:justify-center sm:items-center lg:mr-3 sm:max-h-80 sm:overflow-hidden">
-            <img 
-              className="block" 
-              src={main1} 
-              alt="candles" 
-            />
-          </div>
-          <div className="mt-6 sm:w-max lg:text-center">
-            <p className="text-2xl md:text-3xl mx-6 mt-6 tracking-widest">Naturalne składniki</p>
-            <p className="text-sm font-light md:text-base mx-6 mt-3 tracking-widest">To coś co wyróżnia KangurMakesCandles</p>
-            <Link to="/shop">
-              <div className="mx-6 mt-6 mb-2 py-2 border-2 border-black cursor-pointer w-auto">
-                  <p className="text-center tracking-wider">Poznaj nasze produkty</p>
-              </div>
-            </Link>
-          </div>
-        </div>
-        
-        <div className="3rdrow box-border lg:mb-20">
-          <div className="sm:hidden">
-            <img 
-              className="block" 
-              src={main2} 
-              alt="candles" 
-            />
-          </div>
-          <div className="mt-10 mb-6">
-            <p className="text-2xl text-center md:text-4xl tracking-widest">Nowości</p>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="2ndrow flex flex-wrap justify-around max-w-screen-md box-border mx-2.5 sm:-mx-2 my-6 sm:justify-around">
-            {products.map((product) => (
-              <div className="mb-4 w-1/2 sm:w-1/3 px-2 sm:px-4 sm:mb-10">
-                <div className="border border-black">
-                <Link to={`/${product.id}`}>
-                  <img 
-                    className="block" 
-                    src={product.image.url} 
-                    alt={product.name}   
-                  />
-                </Link>
-              </div>  
-              </div>
-            ))}  
-          </div>
-        </div>
-        {/*<ShopPreview />*/}
-        <div className="4throw box-border mb-8">
-          <div className="sm:flex sm:justify-center sm:items-center sm:max-h-80 sm:overflow-hidden">
-            <img 
-              className="block" 
-              src={main3} 
-              alt="candles" 
-            />
-          </div>
-        </div>
-      </div>    
+      <>  
+        <div className="h-full">
+          {sections.map((section)=>{
+            <Section section={section}/>
+          })}
+        </div>    
+      </>    
   );
 }
 

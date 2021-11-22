@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'poiret-one': ['"Poiret One"', 'cursive']
-      }
+      },
     },
   },
   variants: {
