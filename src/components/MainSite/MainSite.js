@@ -18,16 +18,14 @@ const sections = [
 ]
 
 const MainSite = () => {
-  return (
-      <>  
+  return ( 
         <div className="h-full">
           {sections.map((section)=>{
             <div key={section.key}>
               <Section section={section}/>
             </div>
           })}
-        </div>    
-      </>    
+        </div>      
   );
 }
 
