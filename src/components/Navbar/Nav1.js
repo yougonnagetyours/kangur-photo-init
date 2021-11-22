@@ -8,9 +8,9 @@ import brand from '../../pics/kangarooWhite.png'
 //import Footer from './Footer.js'
 
 const navigation = [
-  { name: 'Sklep', path: '/shop', current: false },
-  { name: 'O nas', path: '/about', current: false },
-  { name: 'Kontakt', path: '/contact', current: false },
+  { name: 'Projekty', path: '/shop', current: false },
+  { name: 'O mnie', path: '/about', current: false },
+  { name: 'Instagram', path: '', current: false },
 ]
 
 function classNames(...classes) {

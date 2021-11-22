@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export default function Section({ section }) {
+const Section = ({ section }) => {
   
   return (
       <div>
@@ -18,3 +18,5 @@ export default function Section({ section }) {
       </div>    
   );
 }
+
+export default Section

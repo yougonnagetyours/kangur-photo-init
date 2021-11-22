@@ -13,8 +13,8 @@ import {
 } from "react-router-dom"
 
 const sections = [
-  {name:"O mnie",img:"about",slug:"/o-mnie"},
-  {name:"Zakopane",img:"zakopane",slug:"/zakopane"},
+  {id:"1", name:"O mnie",img:"about",slug:"/o-mnie"},
+  {id:"2", name:"Zakopane",img:"zakopane",slug:"/zakopane"},
 ]
 
 const MainSite = () => {
@@ -22,7 +22,9 @@ const MainSite = () => {
       <>  
         <div className="h-full">
           {sections.map((section)=>{
-            <Section section={section}/>
+            <div key={section.key}>
+              <Section section={section}/>
+            </div>
           })}
         </div>    
       </>    
