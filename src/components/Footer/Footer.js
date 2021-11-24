@@ -12,7 +12,7 @@ export default function Footer() {
           <p className="text-sm font-light tracking-widest">@2021, Kinga</p>
         </div>
         <div className="mx-2 h-4 flex justify-center">
-          <a href="https://www.instagram.com/?hl=en" className="block">
+          <a href="https://www.instagram.com/kangur333/?hl=en" className="block">
             <img 
                 className="block h-full" 
                 src={insta} 
