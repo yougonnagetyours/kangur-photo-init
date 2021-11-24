@@ -2,7 +2,7 @@ import React from 'react'
 import Section from './Section/Section'
 
 import about from '../../pics/about-cover.jpeg'
-import zakopane from '../../pics/Zakopane.jpeg'
+import zakopane from '../../pics/zakopane/Zakopane.jpeg'
 import main2 from '../../pics/main2.jpg'
 import main3 from '../../pics/main3.jpg'
 import {
@@ -13,18 +13,29 @@ import {
 } from "react-router-dom"
 
 const sections = [
-  {id:"1", name:"O mnie",img:"about",slug:"/o-mnie"},
-  {id:"2", name:"Zakopane",img:"zakopane",slug:"/zakopane"},
+  {id:1, name:"Zakopane",img : {title:zakopane,},slug:"/zakopane"},
 ]
+
+const items = [1,2,3]
 
 const MainSite = () => {
   return ( 
-        <div className="h-full">
-          {sections.map((section)=>{
-            <div key={section.key}>
-              <Section section={section}/>
+        <div className="">
+          <div className="relative h-96 lg:mr-3 max-h-80 overflow-hidden">
+            <img 
+              className="block w-full h-full object-cover" 
+              src={about}
+              alt="candles" 
+            />
+            <div className="absolute top-0 right-0 mx-3 my-4">
+              <p className="text-2xl text-white tracking">O mnie</p>
             </div>
-          })}
+          </div>
+          {sections.map((section)=>(
+            <div key={section.id}>
+              <Section section={section} />
+            </div>
+          ))}
         </div>      
   );
 }
