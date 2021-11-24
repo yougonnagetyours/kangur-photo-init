@@ -11,6 +11,7 @@ import ScrollToTop from './components/scrollToTop.js'
 //import sections
 //Zakopane
 import zakopaneTitle from './pics/zakopane/Zakopane.jpeg'
+import zakopaneAnother from './pics/zakopane/Zakopane2.jpeg'
 //Pieniny
 import pieninyTitle from './pics/pieniny/p2.jpg'
 import pieninyAnother from './pics/pieniny/p1.jpg'
@@ -23,7 +24,7 @@ import {
 } from "react-router-dom"
 
 const sections = [
-  {id:1, name: "Zakopane", img: {title: zakopaneTitle,}, desc: "Spontaniczny wyjazd do Zakopanego :)", slug: "zakopane"},
+  {id:1, name: "Zakopane", img: {title: zakopaneTitle, another: zakopaneAnother}, desc: "Spontaniczny wyjazd do Zakopanego :)", slug: "zakopane"},
   {id:2, name: "Pieniny", img: {title: pieninyTitle, another: pieninyAnother}, desc: "Kilka ujęć z pięknych Pienin", slug: "pieniny"},
 ]
 
