@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import Nav1 from './components/Navbar/Nav1.js'
 import MainSite from './components/MainSite/MainSite.js'
 import Projects from './components/Projects/Projects.js'
+import ProjectDetails from './components/ProjectDetails/ProjectDetails.js'
 
 import Footer from './components/Footer/Footer.js'
 import About from './components/About/About.js'
@@ -21,8 +22,8 @@ import {
 } from "react-router-dom"
 
 const sections = [
-  {id:1, name:"Zakopane",img : {title:zakopaneTitle,},slug:"/zakopane"},
-  {id:2, name:"Pieniny",img : {title:pieninyTitle,},slug:"/pieniny"},
+  {id:1, name: "Zakopane", img: {title:zakopaneTitle,}, desc: "Spontaniczny wyjazd do Zakopanego :)", slug: "zakopane"},
+  {id:2, name: "Pieniny", img: {title:pieninyTitle,}, desc: "Kilka ujęć z pięknych Pienin", slug: "pieniny"},
 ]
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Route path="/projekty">
               <Projects sections={sections}/>
             </Route>
+            <Route exact path="/:id" children={<ProjectDetails sections={sections} />}></Route> 
           </Switch>
         </Fragment>
       </main>
