@@ -1,12 +1,17 @@
 import React, { Fragment } from 'react'
 import Nav1 from './components/Navbar/Nav1.js'
 import MainSite from './components/MainSite/MainSite.js'
-import Shop from './components/Shop/Shop.js'
+import Projects from './components/Projects/Projects.js'
 
 import Footer from './components/Footer/Footer.js'
 import About from './components/About/About.js'
 import Contact from './components/Contact/Contact.js'
 import ScrollToTop from './components/scrollToTop.js'
+//import sections
+//Zakopane
+import zakopaneTitle from './pics/zakopane/Zakopane.jpeg'
+//Pieniny
+import pieninyTitle from './pics/pieniny/p2.jpg'
 
 import {
   BrowserRouter as Router,
@@ -14,6 +19,11 @@ import {
   Route,
   Link
 } from "react-router-dom"
+
+const sections = [
+  {id:1, name:"Zakopane",img : {title:zakopaneTitle,},slug:"/zakopane"},
+  {id:2, name:"Pieniny",img : {title:pieninyTitle,},slug:"/pieniny"},
+]
 
 function App() {
   return (
@@ -26,10 +36,10 @@ function App() {
           <ScrollToTop />
           <Switch>
             <Route exact path="/">
-              <MainSite/>
+              <MainSite sections={sections}/>
             </Route>  
-            <Route path="/shop">
-              <Shop/>
+            <Route path="/projekty">
+              <Projects sections={sections}/>
             </Route>
           </Switch>
         </Fragment>

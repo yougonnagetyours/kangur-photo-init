@@ -12,13 +12,11 @@ import {
   Link
 } from "react-router-dom"
 
-const sections = [
-  {id:1, name:"Zakopane",img : {title:zakopane,},slug:"/zakopane"},
-]
+
 
 const items = [1,2,3]
 
-const MainSite = () => {
+const MainSite = ({ sections }) => {
   return ( 
         <div className="">
           <div className="relative h-96 lg:mr-3 max-h-80 overflow-hidden">

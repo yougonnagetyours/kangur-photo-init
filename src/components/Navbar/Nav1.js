@@ -8,7 +8,7 @@ import brand from '../../pics/kangarooWhite.png'
 //import Footer from './Footer.js'
 
 const navigation = [
-  { name: 'Projekty', path: '/shop', current: false, },
+  { name: 'Projekty', path: '/projekty', current: false, },
   { name: 'O mnie', path: '/about', current: false, },
 ]
 
