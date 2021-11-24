@@ -39,9 +39,9 @@ const Nav1 = ({ cart }) => {
           </Menu.Button>
           </div>
 
-          <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+          <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
                 <Link to="/">
-                  <div className="flex-shrink-0 flex items-center">
+                  <div className="flex-shrink-0 flex items-center sm:px-3">
                     <img
                       className="hidden sm:block h-12 w-auto"
                       src={brand}
@@ -50,7 +50,7 @@ const Nav1 = ({ cart }) => {
                   </div>
                 </Link>
                 <div className="hidden sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex">
                     {navigation.map((item) => (
                       <Link to={item.path}>
                         <div

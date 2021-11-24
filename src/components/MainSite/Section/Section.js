@@ -12,7 +12,7 @@ const Section = ({ section }) => {
               alt="candles" 
             />
             <div className="absolute top-0 right-0 mx-3 my-4">
-              <p className="text-2xl text-white tracking">{section.name}</p>
+              <p className="text-2xl text-white font-light ">{section.name}</p>
             </div>
           </Link>
         </>

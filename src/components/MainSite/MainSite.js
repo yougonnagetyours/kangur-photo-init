@@ -31,11 +31,13 @@ const MainSite = ({ sections }) => {
               </div>
             </Link>
           </div>
-          {sections.map((section)=>(
-            <div key={section.id} className="relative h-96 max-h-80 overflow-hidden">
-              <Section section={section} />
-            </div>
-          ))}
+          <div className="md:flex md:flex-wrap">
+            {sections.map((section)=>(
+              <div key={section.id} className="relative h-96 md:w-1/2 max-h-80 overflow-hidden">
+                <Section section={section} />
+              </div>
+            ))}
+          </div>  
         </div>      
   );
 }
