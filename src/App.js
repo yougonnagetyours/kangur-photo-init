@@ -40,7 +40,10 @@ function App() {
           <Switch>
             <Route exact path="/">
               <MainSite sections={sections}/>
-            </Route>  
+            </Route> 
+            <Route path="/about">
+              <About />
+            </Route> 
             <Route path="/projekty">
               <Projects sections={sections}/>
             </Route>

@@ -16,7 +16,7 @@ const Projects = ({ sections }) => {
   return ( 
         <div className="mb-6">
           {sections.map((section)=>(
-            <div key={section.id} className="relative h-48 lg:mr-3 max-h-80 overflow-hidden">
+            <div key={section.id} className="relative h-48 max-h-80 overflow-hidden">
               <Section section={section} />
             </div>
           ))}

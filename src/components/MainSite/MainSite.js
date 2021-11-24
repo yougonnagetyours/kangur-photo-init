@@ -19,18 +19,20 @@ const items = [1,2,3]
 const MainSite = ({ sections }) => {
   return ( 
         <div className="">
-          <div className="relative h-96 lg:mr-3 max-h-80 overflow-hidden">
-            <img 
-              className="block w-full h-full object-cover" 
-              src={about}
-              alt="candles" 
-            />
-            <div className="absolute top-0 right-0 mx-3 my-4">
-              <p className="text-2xl text-white tracking">O mnie</p>
-            </div>
+          <div className="relative h-96 max-h-80 overflow-hidden">
+            <Link to="/about">
+              <img 
+                className="block w-full h-full object-cover" 
+                src={about}
+                alt="candles" 
+              />
+              <div className="absolute top-0 right-0 mx-3 my-4">
+                <p className="text-2xl text-white tracking">O mnie</p>
+              </div>
+            </Link>
           </div>
           {sections.map((section)=>(
-            <div key={section.id} className="relative h-96 lg:mr-3 max-h-80 overflow-hidden">
+            <div key={section.id} className="relative h-96 max-h-80 overflow-hidden">
               <Section section={section} />
             </div>
           ))}
