@@ -1,5 +1,5 @@
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment, React, useEffect, useRef, useState } from 'react'
 import { SearchIcon, MenuIcon, XIcon, ShoppingCartIcon } from '@heroicons/react/outline'
 import { Link } from "react-router-dom"
 import insta from '../../pics/instagram.png'
@@ -8,9 +8,8 @@ import brand from '../../pics/kangarooWhite.png'
 //import Footer from './Footer.js'
 
 const navigation = [
-  { name: 'Projekty', path: '/shop', current: false },
-  { name: 'O mnie', path: '/about', current: false },
-  { name: 'Instagram', path: '', current: false },
+  { name: 'Projekty', path: '/shop', current: false, },
+  { name: 'O mnie', path: '/about', current: false, },
 ]
 
 function classNames(...classes) {
@@ -66,6 +65,14 @@ const Nav1 = ({ cart }) => {
                         </div>
                       </Link>
                     ))}
+                    <a href="https://www.instagram.com/kangur333/?hl=en">
+                      <div                     
+                        className='text-black hover:border-2 border-gray-700 hover:text-gray-700 hover:underline'
+                        aria-current={'page'}
+                      >
+                        Instagram
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -96,7 +103,7 @@ const Nav1 = ({ cart }) => {
               <div>
                 {navigation.map((item) =>(
                   <Menu.Item>
-                    <Link to={item.path}>
+                    <Link to={item.path} component={item.component}>
                       <div
                         key={item.name}
                         className={classNames(
@@ -109,8 +116,16 @@ const Nav1 = ({ cart }) => {
                       </div>
                     </Link>
                   </Menu.Item>
-                ))}
-              </div>    
+                ))}            
+              </div>  
+              <a href="https://www.instagram.com/kangur333/?hl=en">
+                <div                     
+                  className='text-white block px-2 py-5 rounded-md text-base tracking-widest'
+                  aria-current='page'
+                  >
+                  Instagram
+                </div> 
+              </a>    
             </div>
           </Menu.Items>
         </Transition>

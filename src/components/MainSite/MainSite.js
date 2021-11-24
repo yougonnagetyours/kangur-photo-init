@@ -32,7 +32,7 @@ const MainSite = () => {
             </div>
           </div>
           {sections.map((section)=>(
-            <div key={section.id}>
+            <div key={section.id} className="relative h-96 lg:mr-3 max-h-80 overflow-hidden">
               <Section section={section} />
             </div>
           ))}
