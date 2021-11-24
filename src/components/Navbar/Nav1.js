@@ -1,9 +1,7 @@
 import { Menu, Transition } from '@headlessui/react'
-import { Fragment, React, useEffect, useRef, useState } from 'react'
-import { SearchIcon, MenuIcon, XIcon, ShoppingCartIcon } from '@heroicons/react/outline'
+import { Fragment, React } from 'react'
 import { Link } from "react-router-dom"
-import insta from '../../pics/instagram.png'
-import fb from '../../pics/facebook.png'
+
 import brand from '../../pics/kangarooWhite.png'
 //import Footer from './Footer.js'
 

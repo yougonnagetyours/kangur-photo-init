@@ -1,8 +1,5 @@
 import React from 'react'
 import insta from '../../pics/instagram.png'
-import fb from '../../pics/facebook.png'
-
-
 
 export default function Footer() {
   
