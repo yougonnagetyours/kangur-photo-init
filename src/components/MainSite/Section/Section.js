@@ -9,7 +9,7 @@ const Section = ({ section }) => {
             <img 
               className="block w-full h-full object-cover cursor-pointer" 
               src={section.img.title} 
-              alt="candles" 
+              alt={section.name} 
             />
             <div className="absolute top-0 right-0 mx-3 my-4">
               <p className="text-2xl text-white font-light ">{section.name}</p>
