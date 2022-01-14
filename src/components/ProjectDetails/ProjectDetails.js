@@ -12,7 +12,7 @@ const ProjectDetails = ({ sections }) => {
 
   return (
     <>
-      <Loader />
+      {isLoaded ? <Loader /> : null}
       {sections.map((section) =>
           id === section.slug ? (
             <div className="mt-14 mx-4 mb-8">
