@@ -84,7 +84,7 @@ const sections = [
 function App() {
   return (
     <Router>
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-xl mx-auto">
         <div className="w-full h-16 sm:hidden" />
         <Nav1 />
         <main>
