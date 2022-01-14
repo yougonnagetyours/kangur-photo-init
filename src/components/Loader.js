@@ -3,11 +3,11 @@ import jumpingKangaroo from "../pics/kangaroo.png";
 
 const Loader = () => {
   return (
-    <div className="w-full h-full flex justify-center items-center">
+    <div className="w-full h-screen flex justify-center items-center">
       <div>
-        <div className="">
+        <div className="flex justify-center">
           <img
-            className="block h-12 w-auto"
+            className="block h-20 w-auto"
             src={jumpingKangaroo}
             alt="jumpingKangaroo"
           />
