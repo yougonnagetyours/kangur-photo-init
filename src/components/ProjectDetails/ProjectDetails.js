@@ -7,7 +7,7 @@ const ProjectDetails = ({ sections }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setIsLoaded(true), 3000);
+    setTimeout(() => setIsLoaded(true), 700);
   }, []);
 
   return (
