@@ -12,7 +12,7 @@ const Loader = () => {
             alt="jumpingKangaroo"
           />
         </div>
-        <div className="text-center text-sm mx-auto mt-6">Wczytywanie</div>
+        <div className="text-center text-sm mx-auto mt-2">Wczytywanie</div>
       </div>
     </div>
   );
