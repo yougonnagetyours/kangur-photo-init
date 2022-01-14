@@ -12,8 +12,8 @@ const ProjectDetails = ({ sections }) => {
 
   return (
     <>
-      {isLoaded ? (
-        sections.map((section) =>
+      <Loader />
+      {sections.map((section) =>
           id === section.slug ? (
             <div className="mt-14 mx-4 mb-8">
               <div className="mb-10">
@@ -36,9 +36,7 @@ const ProjectDetails = ({ sections }) => {
             </div>
           ) : null
         )
-      ) : (
-        <Loader />
-      )}
+      ))}
     </>
   );
 };
