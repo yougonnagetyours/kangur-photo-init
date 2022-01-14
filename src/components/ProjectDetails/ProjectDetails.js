@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import Loader from "../Loader";
 
 const ProjectDetails = ({ sections }) => {
   let { id } = useParams();
@@ -36,7 +37,7 @@ const ProjectDetails = ({ sections }) => {
           ) : null
         )
       ) : (
-        <div className="text-center text-2xl mx-auto mt-10">Wczytywanie</div>
+        <Loader />
       )}
     </>
   );
