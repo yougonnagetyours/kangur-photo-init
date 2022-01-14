@@ -34,42 +34,48 @@ const sections = [
   {
     id: 1,
     name: "Zakopane",
-    img: { title: zakopaneTitle, another: zakopaneAnother },
+    titleImg: zakopaneTitle,
+    imgs: [zakopaneTitle, zakopaneAnother],
     desc: "Spontaniczny wyjazd do Zakopanego :)",
     slug: "zakopane"
   },
   {
     id: 2,
     name: "Pieniny",
-    img: { title: pieninyTitle, another: pieninyAnother },
+    titleImg: pieninyTitle,
+    imgs: [pieninyTitle, pieninyAnother],
     desc: "Kilka zdjęć z pięknych Pienin",
     slug: "pieniny"
   },
   {
     id: 3,
     name: "Natura",
-    img: { title: n1, another: n2 },
+    titleImg: n1,
+    imgs: [n1, n2],
     desc: "",
     slug: "natura"
   },
   {
     id: 4,
     name: "Bałtyk",
-    img: { title: b1, another: b2 },
+    titleImg: b1,
+    imgs: [b1, b2],
     desc: "",
     slug: "baltic"
   },
   {
     id: 5,
     name: "Sunsets",
-    img: { title: s1, another: s2 },
+    titleImg: s1,
+    imgs: [s1, s2],
     desc: "",
     slug: "sunsets"
   },
   {
     id: 6,
     name: "Wisła",
-    img: { title: w1, another: w2 },
+    titleImg: w1,
+    imgs: [w1, w2],
     desc: "",
     slug: "wisla"
   }
