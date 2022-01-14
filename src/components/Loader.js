@@ -7,12 +7,12 @@ const Loader = () => {
       <div className='mb-20'>
         <div className="flex justify-center animate-bounce">
           <img
-            className="block h-20 w-auto"
+            className="block h-12 w-auto"
             src={jumpingKangaroo}
             alt="jumpingKangaroo"
           />
         </div>
-        <div className="text-center font-bold text-lg mx-auto mt-6">Wczytywanie</div>
+        <div className="text-center text-sm mx-auto mt-6">Wczytywanie</div>
       </div>
     </div>
   );
