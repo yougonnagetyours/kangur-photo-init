@@ -5,33 +5,39 @@ const ProjectDetails = ({ sections }) => {
   let { id } = useParams();
   const [isLoaded, setIsLoaded] = useState(false);
 
+  useEffect(() => {
+    setTimeout(() => setIsLoaded(true), 700);
+  }, []);
+
   return (
     <>
-      {isLoaded
-        ? sections.map((section) =>
-            id === section.slug ? (
-              <div className="mt-14 mx-4 mb-8">
-                <div className="mb-10">
-                  <p className="text-4xl">{section.name}</p>
-                </div>
-                <div className="mb-10">
-                  <p className="text-base font-light text-justify">
-                    {section.desc}
-                  </p>
-                </div>
-                {section.imgs.map((img) => (
-                  <div className="mb-10">
-                    <img
-                      className="block w-full h-full object-cover"
-                      src={img}
-                      alt="candles"
-                    />
-                  </div>
-                ))}
+      {isLoaded ? (
+        sections.map((section) =>
+          id === section.slug ? (
+            <div className="mt-14 mx-4 mb-8">
+              <div className="mb-10">
+                <p className="text-4xl">{section.name}</p>
               </div>
-            ) : null
-          )
-        : "Loading"}
+              <div className="mb-10">
+                <p className="text-base font-light text-justify">
+                  {section.desc}
+                </p>
+              </div>
+              {section.imgs.map((img) => (
+                <div className="mb-10">
+                  <img
+                    className="block w-full h-full object-cover"
+                    src={img}
+                    alt="candles"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : null
+        )
+      ) : (
+        <div className="text-center text-2xl mx-auto mt-10">Wczytywanie</div>
+      )}
     </>
   );
 };
