@@ -6,9 +6,9 @@ const ProjectDetails = ({ sections }) => {
   let { id } = useParams();
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => setIsLoaded(true), 700);
-  }, []);
+  //useEffect(() => {
+  //  setTimeout(() => setIsLoaded(true), 700);
+  //}, []);
 
   return (
     <>
