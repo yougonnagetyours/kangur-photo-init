@@ -35,8 +35,7 @@ const ProjectDetails = ({ sections }) => {
               ))}
             </div>
           ) : null
-        )
-      ))}
+        )}
     </>
   );
 };
