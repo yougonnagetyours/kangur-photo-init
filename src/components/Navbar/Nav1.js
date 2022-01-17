@@ -20,7 +20,7 @@ const Nav1 = ({ cart }) => {
       <Menu as="div" className="bg-black fixed top-0 right-0 z-50 w-full sm:static">
         {({ open }) => (
         <>  
-        <div className={classNames(open ? "" : "", "max-w-7xl mx-auto px-2 sm:px-0 lg:px-8")}>
+        <div className={classNames(open ? "" : "", "mx-auto px-2 sm:px-0 lg:px-8")}>
         <div className="relative flex items-center justify-between h-16 sm:h-24">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <Menu.Button className="inline-flex items-center justify-center p-2 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
