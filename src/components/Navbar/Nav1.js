@@ -17,7 +17,7 @@ function classNames(...classes) {
 const Nav1 = ({ cart }) => {
   return (
     <div className="">
-      <Menu as="div" className="bg-black fixed top-0 right-0 z-50 w-full max-w-7xl sm:static">
+      <Menu as="div" className="bg-black fixed top-0 right-0 z-50 w-full sm:static">
         {({ open }) => (
         <>  
         <div className={classNames(open ? "" : "", "max-w-7xl mx-auto px-2 sm:px-0 lg:px-8")}>
