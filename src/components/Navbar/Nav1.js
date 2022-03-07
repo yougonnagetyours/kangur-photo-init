@@ -3,7 +3,6 @@ import { Fragment, React } from 'react'
 import { Link } from "react-router-dom"
 
 import brand from '../../pics/kangarooWhite.png'
-//import Footer from './Footer.js'
 
 const navigation = [
   { name: 'Projekty', path: '/projekty', current: false, },
@@ -61,7 +60,7 @@ const Nav1 = ({ cart }) => {
                         </div>
                       </Link>
                     ))}
-                    <a href="https://www.instagram.com/kangur333/?hl=en">
+                    <a href="https://www.instagram.com">
                       <div                     
                         className='text-white hover:border-2 border-gray-300 hover:text-gray-300 hover:underline px-3 py-2 rounded-md text-lg tracking-widest'
                         aria-current={'page'}
@@ -114,7 +113,7 @@ const Nav1 = ({ cart }) => {
                   </Menu.Item>
                 ))}            
               </div>  
-              <a href="https://www.instagram.com/kangur333/?hl=en">
+              <a href="https://www.instagram.com">
                 <div                     
                   className='text-white block px-2 py-5 rounded-md text-base tracking-widest'
                   aria-current='page'
